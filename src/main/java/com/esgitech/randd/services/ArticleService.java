@@ -10,4 +10,5 @@ public interface ArticleService {
     List<Article> findByMotCle(String motCle);
     Article assignArticleToUser(Long articleId, Long userId);
     Article assignArticleToDomaine(Long articleId, Domaine domaine);
+    List<Article> findAllArticles();
 }

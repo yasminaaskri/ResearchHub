@@ -20,6 +20,10 @@ public class ArticleController {
     public Article createArticle(@RequestBody Article article) {
         return articleService.saveArticle(article);
     }
+    @GetMapping("/allArticles")
+    public ResponseEntity<List<Article>> getAllArticles() {
+        return ResponseEntity.ok(articleService.findAllArticles());
+    }
 
     @GetMapping("/search")
     public ResponseEntity<List<Article>> searchByMotCle(@RequestParam String motCle) {

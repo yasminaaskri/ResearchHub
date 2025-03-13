@@ -56,4 +56,9 @@ public class ArticleServiceImpl implements ArticleService {
 
         return null;
     }
+    @Override
+    public List<Article> findAllArticles() {
+        return articleRepository.findAll();
+    }
+
 }
